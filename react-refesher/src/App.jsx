@@ -3,10 +3,8 @@ import Post from "./components/Post";
 function App() {
 	return (
 		<main>
-			<Post />
-			<Post />
-			<Post />
-			<Post />
+			<Post author="Miguel" body="React.js" />
+			<Post author="Manuel" body="Next.js" />
 		</main>
 	);
 }
