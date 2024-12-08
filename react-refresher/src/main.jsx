@@ -2,9 +2,9 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import "./index.css";
-import App from "./App.jsx";
+import Posts from "./routes/Posts.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import NewPost from "./components/NewPost.jsx";
+import NewPost from "./routes/NewPost.jsx";
 import RootLayout from "./routes/RootLayout.jsx";
 
 const router = createBrowserRouter([
@@ -14,9 +14,9 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: "/",
-				element: <App />,
+				element: <Posts />,
+				children: [{ path: "/create-post", element: <NewPost /> }],
 			},
-			{ path: "/create-post", element: <NewPost /> },
 		],
 	},
 ]);
