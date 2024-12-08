@@ -1,3 +1,3 @@
-export default function Meals() {
-	return <h1>Meals</h1>;
+export default function MealsPage() {
+	return <h1>Meals Page</h1>;
 }
